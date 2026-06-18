@@ -36,13 +36,24 @@ functions:
 resources:
   Resources:
     TablaWebScrapping:
-      Type: AWS::DynamoDB::Table
-      Properties:
-        TableName: TablaWebScrappingIGP
-        AttributeDefinitions:
-          - AttributeName: id
-            AttributeType: S
-        KeySchema:
-          - AttributeName: id
-            KeyType: HASH
-        BillingMode: PAY_PER_REQUEST
+        Type: AWS::DynamoDB::Table
+        Properties:
+          TableName: TablaWebScrapping
+          AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+          KeySchema:
+            - AttributeName: id
+              KeyType: HASH
+          BillingMode: PAY_PER_REQUEST
+    TablaWebScrappingIGP:
+        Type: AWS::DynamoDB::Table
+        Properties:
+          TableName: TablaWebScrappingIGP
+          AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+          KeySchema:
+            - AttributeName: id
+              KeyType: HASH
+          BillingMode: PAY_PER_REQUEST
