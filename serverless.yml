@@ -22,13 +22,23 @@ functions:
           method: get
           cors: true
           integration: lambda
-
+  scrape_table_IGP:
+    handler: scrape_table_IGP.lambda_handler
+    package:
+      include:
+        - ./**
+      events:
+        - http:
+          path: /scrapeIGP/table
+          method: get
+          cors: true
+          integration: lambda
 resources:
   Resources:
     TablaWebScrapping:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: TablaWebScrapping
+        TableName: TablaWebScrappingIGP
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
