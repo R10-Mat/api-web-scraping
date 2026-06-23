@@ -27,8 +27,8 @@ functions:
     package:
       include:
         - ./**
-      events:
-        - http:
+    events:
+      - http:
           path: /scrapeIGP/table
           method: get
           cors: true
