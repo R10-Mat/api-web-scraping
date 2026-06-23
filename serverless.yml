@@ -23,7 +23,7 @@ functions:
           cors: true
           integration: lambda
   scrape_table_IGP:
-    handler: scrape_table_IGP.lambda_handler
+    handler: scrap_table_IGP.lambda_handler
     package:
       include:
         - ./**
